@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ФЕНИКС | текстиль оптом · строительные технологии</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0b0a0a;
+            background-image: radial-gradient(rgba(230, 100, 30, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+            font-family: 'Space Grotesk', sans-serif;
+            color: #ece2d7;
+            overflow-x: hidden;
+        }
+
+        /* основной контейнер */
+        .wrap {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* ========== ГЛАВНЫЙ ЭКРАН — ОГНЕННАЯ ПТИЦА ========== */
+        .hero-phoenix {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-bottom: 2px solid #e65e1e30;
+            margin-bottom: 4rem;
+        }
+        .hero-phoenix::before {
+            content: '';
+            position: absolute;
+            right: -10%;
+            top: 10%;
+            width: 50%;
+            height: 80%;
+            background: radial-gradient(ellipse, #e65e1e20, transparent);
+            filter: blur(60px);
+            z-index: -1;
+        }
+        .hero-text {
+            max-width: 60%;
+        }
+        .hero-text h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+            line-height: 1;
+        }
+        .hero-text h1 span {
+            color: #e65e1e;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: #e65e1e;
+            color: #0b0a0a;
+            padding: 0.2rem 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .stat-ph {
+            border-left: 2px solid #e65e1e;
+            padding-left: 1rem;
+        }
+
+        /* ========== «ЛОСКУТНАЯ» СЕТКА ТОВАРНЫХ КАТЕГОРИЙ ========== */
+        .tapestry {
+            margin: 5rem 0;
+        }
+        .tapestry h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .fabric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .fabric-tile {
+            background: #161312;
+            padding: 2rem 1.5rem;
+            transition: 0.2s;
+            border-bottom: 2px solid #e65e1e60;
+        }
+        .fabric-tile:hover {
+            transform: translateY(-5px);
+            border-bottom-color: #e65e1e;
+        }
+        .fabric-tile i {
+            font-size: 2rem;
+            color: #e65e1e;
+            margin-bottom: 1rem;
+        }
+
+        /* ========== СЛАЙДЕР КОЛЛЕКЦИЙ (НЕОБЫЧНЫЙ, ВЕРТИКАЛЬНЫЙ НА ДЕСКТОПЕ) ========== */
+        .collections {
+            background: #11100e;
+            padding: 3rem;
+            margin: 4rem 0;
+            border-radius: 2rem;
+        }
+        .collections h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .slider-vertical {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 1rem;
+        }
+        .slide-item {
+            min-width: 280px;
+            background: #1e1b18;
+            padding: 1.5rem;
+            scroll-snap-align: start;
+            border-radius: 1rem;
+        }
+
+        /* ========== ПРЕИМУЩЕСТВА — КАК "НИТИ" ========== */
+        .threads {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 5rem 0;
+        }
+        .thread {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            padding: 1rem;
+            border-top: 2px solid #e65e1e60;
+        }
+        .thread .big {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #e65e1e;
+        }
+
+        /* ========== РЕКВИЗИТЫ (стиль "феникс-визитка") ========== */
+        .card-phoenix {
+            background: #11100e;
+            border-left: 6px solid #e65e1e;
+            padding: 2rem;
+            margin: 3rem 0;
+            font-family: monospace;
+        }
+
+        /* ========== ФОРМА (необычная, с "пером") ========== */
+        .feather-form {
+            background: #161312;
+            padding: 2rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+        .feather-form::after {
+            content: '🪶';
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+        .feather-form input, .feather-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #1e1b18;
+            border: none;
+            color: #ece2d7;
+        }
+        .feather-form button {
+            background: #e65e1e;
+            border: none;
+            padding: 1rem;
+            width: 100%;
+            font-weight: bold;
+            color: #0b0a0a;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #e65e1e30;
+        }
+
+        @media (max-width: 800px) {
+            .hero-text { max-width: 100%; }
+            .hero-text h1 { font-size: 3rem; }
+            .slider-vertical { flex-direction: column; overflow-x: visible; }
+            .slide-item { min-width: auto; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <!-- Главный блок -->
+    <div class="hero-phoenix">
+        <div class="hero-text">
+            <div class="hero-tag">ОКВЭД 46.41</div>
+            <h1>СТРОИТЕЛЬНЫЕ ТЕХНОЛОГИИ <span>«ФЕНИКС»</span></h1>
+            <p style="font-size:1.2rem; margin:1rem 0;">Оптовая торговля текстильными изделиями — от технической ткани до спецодежды и домашнего текстиля. Более 10 лет на рынке.</p>
+            <div class="hero-stats">
+                <div class="stat-ph"><strong>с 2013</strong><br>год основания</div>
+                <div class="stat-ph"><strong>200+</strong><br>поставок</div>
+                <div class="stat-ph"><strong>24/7</strong><br>логистика</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Лоскутная сетка товарных категорий -->
+    <div class="tapestry">
+        <h2>Что мы поставляем оптом</h2>
+        <div class="fabric-grid">
+            <div class="fabric-tile"><i class="fas fa-tshirt"></i> <h3>Технический текстиль</h3><p>Геотекстиль, иглопробивное полотно, фильтровальные ткани.</p></div>
+            <div class="fabric-tile"><i class="fas fa-hard-hat"></i> <h3>Спецодежда</h3><p>Костюмы, жилеты, перчатки, обувь — под заказ.</p></div>
+            <div class="fabric-tile"><i class="fas fa-couch"></i> <h3>Домашний текстиль</h3><p>Постельное бельё, полотенца, пледы, скатерти.</p></div>
+            <div class="fabric-tile"><i class="fas fa-temperature-low"></i> <h3>Утеплители</h3><p>Термофлис, синтепон, холлофайбер, мембраны.</p></div>
+            <div class="fabric-tile"><i class="fas fa-industry"></i> <h3>Строительные ткани</h3><p>Тентовые материалы, сетка, укрывная ткань.</p></div>
+            <div class="fabric-tile"><i class="fas fa-boxes"></i> <h3>Упаковочный текстиль</h3><p>Мешки, стропы, обвязки, мягкая тара.</p></div>
+        </div>
+    </div>
+
+    <!-- Слайдер коллекций (горизонтальная прокрутка) -->
+    <div class="collections">
+        <h3>🔥 Топ-коллекции этого сезона</h3>
+        <div class="slider-vertical">
+            <div class="slide-item"><i class="fas fa-fire" style="color:#e65e1e;"></i> <strong>Огнестойкие ткани</strong><br>Сертифицированы для строительства</div>
+            <div class="slide-item"><i class="fas fa-tint"></i> <strong>Водоотталкивающие мембраны</strong><br>Защита фасадов и кровли</div>
+            <div class="slide-item"><i class="fas fa-leaf"></i> <strong>Эко-текстиль</strong><br>Натуральные волокна, гипоаллергенно</div>
+            <div class="slide-item"><i class="fas fa-charging-station"></i> <strong>Антистатические ткани</strong><br>Для чувствительных производств</div>
+        </div>
+    </div>
+
+    <!-- Преимущества в виде "нитей" -->
+    <div class="threads">
+        <div class="thread"><div class="big">10+ партнёров</div><p>по всей России</p></div>
+        <div class="thread"><div class="big">Собственная логистика</div><p>доставка от 1 дня</p></div>
+        <div class="thread"><div class="big">Сертификаты</div><p>вся продукция</p></div>
+    </div>
+
+    <!-- Реквизиты в стиле "карточка феникса" -->
+    <div class="card-phoenix">
+        <i class="fas fa-building"></i> <strong>ООО «СТРОИТЕЛЬНЫЕ ТЕХНОЛОГИИ "ФЕНИКС"»</strong><br>
+        ОГРН 1135262006296 | ИНН 5262290828 | КПП 526201001 | ОКПО 25558418<br>
+        Дата регистрации: 8 июля 2013 года<br>
+        Директор: Комаров Илья Игоревич (ИНН 523401119090)<br>
+        Юридический адрес: 603009, Нижегородская область, г. Н. Новгород, пр-кт Гагарина, д. 102, помещ. П3 офис 8<br>
+        Основной вид деятельности: 46.41 — Торговля оптовая текстильными изделиями
+    </div>
+
+    <!-- Дополнительный блок: география поставок -->
+    <div style="background:#11100e; padding:1.5rem; margin:2rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
+        <span><i class="fas fa-map-marker-alt"></i> Нижний Новгород — центральный склад</span>
+        <span><i class="fas fa-truck"></i> Доставка в любой регион РФ</span>
+        <span><i class="fas fa-handshake"></i> Работаем с юр. лицами и ИП</span>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById('phoenixForm');
+    const statusDiv = document.getElementById('phStatus');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('phName').value.trim();
+        const contact = document.getElementById('phContact').value.trim();
+        if(!name || !contact) {
+            statusDiv.innerHTML = '❌ Заполните имя и контакт';
+            statusDiv.style.color = '#e65e1e';
+            return;
+        }
+        statusDiv.innerHTML = '✅ Спасибо! Мы отправим прайс-лист в течение часа.';
+        statusDiv.style.color = '#e65e1e';
+        form.reset();
+        setTimeout(() => statusDiv.innerHTML = '', 4000);
+    });
+</script>
+</body>
+</html>
