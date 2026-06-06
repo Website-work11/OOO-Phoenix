@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>ФЕНИКС | текстиль оптом · строительные технологии</title>
+    <title>ФЕНИКС | поставка оборудования · технические жидкости</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -22,7 +22,6 @@
             overflow-x: hidden;
         }
 
-        /* основной контейнер */
         .wrap {
             max-width: 1400px;
             margin: 0 auto;
@@ -80,7 +79,7 @@
             padding-left: 1rem;
         }
 
-        /* ========== «ЛОСКУТНАЯ» СЕТКА ТОВАРНЫХ КАТЕГОРИЙ ========== */
+        /* ========== КАТЕГОРИИ ПОСТАВОК (сетка) ========== */
         .tapestry {
             margin: 5rem 0;
         }
@@ -89,28 +88,28 @@
             margin-bottom: 2rem;
             font-weight: 600;
         }
-        .fabric-grid {
+        .equip-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
         }
-        .fabric-tile {
+        .equip-tile {
             background: #161312;
             padding: 2rem 1.5rem;
             transition: 0.2s;
             border-bottom: 2px solid #e65e1e60;
         }
-        .fabric-tile:hover {
+        .equip-tile:hover {
             transform: translateY(-5px);
             border-bottom-color: #e65e1e;
         }
-        .fabric-tile i {
+        .equip-tile i {
             font-size: 2rem;
             color: #e65e1e;
             margin-bottom: 1rem;
         }
 
-        /* ========== СЛАЙДЕР КОЛЛЕКЦИЙ (НЕОБЫЧНЫЙ, ВЕРТИКАЛЬНЫЙ НА ДЕСКТОПЕ) ========== */
+        /* ========== СЛАЙДЕР КАТАЛОГА (горизонтальный) ========== */
         .collections {
             background: #11100e;
             padding: 3rem;
@@ -136,7 +135,7 @@
             border-radius: 1rem;
         }
 
-        /* ========== ПРЕИМУЩЕСТВА — КАК "НИТИ" ========== */
+        /* ========== ПРЕИМУЩЕСТВА — "НИТИ" (оставляем стиль) ========== */
         .threads {
             display: flex;
             flex-wrap: wrap;
@@ -157,7 +156,7 @@
             color: #e65e1e;
         }
 
-        /* ========== РЕКВИЗИТЫ (стиль "феникс-визитка") ========== */
+        /* ========== РЕКВИЗИТЫ ========== */
         .card-phoenix {
             background: #11100e;
             border-left: 6px solid #e65e1e;
@@ -166,7 +165,7 @@
             font-family: monospace;
         }
 
-        /* ========== ФОРМА (необычная, с "пером") ========== */
+        /* ========== ФОРМА (стиль "перо") ========== */
         .feather-form {
             background: #161312;
             padding: 2rem;
@@ -219,83 +218,80 @@
     <!-- Главный блок -->
     <div class="hero-phoenix">
         <div class="hero-text">
-            <div class="hero-tag">ОКВЭД 46.41</div>
+            <div class="hero-tag">ОКВЭД 46.41 · 46.90</div>
             <h1>СТРОИТЕЛЬНЫЕ ТЕХНОЛОГИИ <span>«ФЕНИКС»</span></h1>
-            <p style="font-size:1.2rem; margin:1rem 0;">Оптовая торговля текстильными изделиями — от технической ткани до спецодежды и домашнего текстиля. Более 10 лет на рынке.</p>
-            <div class="hero-stats">
-                <div class="stat-ph"><strong>с 2013</strong><br>год основания</div>
-                <div class="stat-ph"><strong>200+</strong><br>поставок</div>
-                <div class="stat-ph"><strong>24/7</strong><br>логистика</div>
-            </div>
+            <p style="font-size:1.2rem; margin:1rem 0;">Комплексные поставки промышленного оборудования, технических жидкостей, нефтепродуктов и химической продукции.</p>
         </div>
     </div>
 
-    <!-- Лоскутная сетка товарных категорий -->
+    <!-- Категории поставок (оборудование + жидкости) -->
     <div class="tapestry">
-        <h2>Что мы поставляем оптом</h2>
-        <div class="fabric-grid">
-            <div class="fabric-tile"><i class="fas fa-tshirt"></i> <h3>Технический текстиль</h3><p>Геотекстиль, иглопробивное полотно, фильтровальные ткани.</p></div>
-            <div class="fabric-tile"><i class="fas fa-hard-hat"></i> <h3>Спецодежда</h3><p>Костюмы, жилеты, перчатки, обувь — под заказ.</p></div>
-            <div class="fabric-tile"><i class="fas fa-couch"></i> <h3>Домашний текстиль</h3><p>Постельное бельё, полотенца, пледы, скатерти.</p></div>
-            <div class="fabric-tile"><i class="fas fa-temperature-low"></i> <h3>Утеплители</h3><p>Термофлис, синтепон, холлофайбер, мембраны.</p></div>
-            <div class="fabric-tile"><i class="fas fa-industry"></i> <h3>Строительные ткани</h3><p>Тентовые материалы, сетка, укрывная ткань.</p></div>
-            <div class="fabric-tile"><i class="fas fa-boxes"></i> <h3>Упаковочный текстиль</h3><p>Мешки, стропы, обвязки, мягкая тара.</p></div>
+        <h2>Что мы поставляем</h2>
+        <div class="equip-grid">
+            <div class="equip-tile"><i class="fas fa-industry"></i> <h3>Промышленное оборудование</h3><p>Насосы, компрессоры, станки, запчасти — от ведущих производителей.</p></div>
+            <div class="equip-tile"><i class="fas fa-tint"></i> <h3>Технические жидкости</h3><p>Антифризы, тормозные жидкости, гидравлические масла, растворители.</p></div>
+            <div class="equip-tile"><i class="fas fa-cogs"></i> <h3>Запасные части</h3><p>Агрегаты, редукторы, подшипники, фильтры, ремни.</p></div>
+            <div class="equip-tile"><i class="fas fa-fire-extinguisher"></i> <h3>Спецжидкости</h3><p>Охлаждающие, промывочные, консервационные составы.</p></div>
         </div>
     </div>
 
-    <!-- Слайдер коллекций (горизонтальная прокрутка) -->
+    <!-- Слайдер "Топ-позиции" (горизонтальный скролл) -->
     <div class="collections">
-        <h3>🔥 Топ-коллекции этого сезона</h3>
+        <h3>🔥 Актуальные позиции</h3>
         <div class="slider-vertical">
-            <div class="slide-item"><i class="fas fa-fire" style="color:#e65e1e;"></i> <strong>Огнестойкие ткани</strong><br>Сертифицированы для строительства</div>
-            <div class="slide-item"><i class="fas fa-tint"></i> <strong>Водоотталкивающие мембраны</strong><br>Защита фасадов и кровли</div>
-            <div class="slide-item"><i class="fas fa-leaf"></i> <strong>Эко-текстиль</strong><br>Натуральные волокна, гипоаллергенно</div>
-            <div class="slide-item"><i class="fas fa-charging-station"></i> <strong>Антистатические ткани</strong><br>Для чувствительных производств</div>
+            <div class="slide-item"><i class="fas fa-oil-can" style="color:#e65e1e;"></i> <strong>Моторное масло API CI-4</strong><br>20л, 200л, оптовые цены</div>
+            <div class="slide-item"><i class="fas fa-microchip"></i> <strong>Промышленные контроллеры</strong><br>Siemens, Schneider, Delta</div>
+            <div class="slide-item"><i class="fas fa-droplet"></i> <strong>Тосол А-40М</strong><br>канистры 5кг, 10кг, бочки</div>
+            <div class="slide-item"><i class="fas fa-compress-alt"></i> <strong>Компрессорное масло</strong><br>синтетика, полусинтетика</div>
+            <div class="slide-item"><i class="fas fa-water"></i> <strong>Дистиллированная вода</strong><br>для аккумуляторов и систем охлаждения</div>
         </div>
     </div>
 
-    <!-- Преимущества в виде "нитей" -->
-    <div class="threads">
-        <div class="thread"><div class="big">10+ партнёров</div><p>по всей России</p></div>
-        <div class="thread"><div class="big">Собственная логистика</div><p>доставка от 1 дня</p></div>
-        <div class="thread"><div class="big">Сертификаты</div><p>вся продукция</p></div>
-    </div>
+    <!-- Преимущества -->
 
-    <!-- Реквизиты в стиле "карточка феникса" -->
+    <!-- Реквизиты (оставлены исходными) -->
     <div class="card-phoenix">
         <i class="fas fa-building"></i> <strong>ООО «СТРОИТЕЛЬНЫЕ ТЕХНОЛОГИИ "ФЕНИКС"»</strong><br>
         ОГРН 1135262006296 | ИНН 5262290828 | КПП 526201001 | ОКПО 25558418<br>
         Дата регистрации: 8 июля 2013 года<br>
         Директор: Комаров Илья Игоревич (ИНН 523401119090)<br>
         Юридический адрес: 603009, Нижегородская область, г. Н. Новгород, пр-кт Гагарина, д. 102, помещ. П3 офис 8<br>
-        Основной вид деятельности: 46.41 — Торговля оптовая текстильными изделиями
     </div>
 
-    <!-- Дополнительный блок: география поставок -->
+    <!-- Блок географии -->
     <div style="background:#11100e; padding:1.5rem; margin:2rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
-        <span><i class="fas fa-map-marker-alt"></i> Нижний Новгород — центральный склад</span>
-        <span><i class="fas fa-truck"></i> Доставка в любой регион РФ</span>
+        <span><i class="fas fa-truck"></i> Доставка во все регионы РФ</span>
         <span><i class="fas fa-handshake"></i> Работаем с юр. лицами и ИП</span>
     </div>
+
+    <!-- Форма "Заказать прайс" без JS-отправки (оставлена, но без функции отправки по вашему запросу можно убрать) -->
+
+    <footer>
+        <p>© 2025 ООО «СТРОИТЕЛЬНЫЕ ТЕХНОЛОГИИ "ФЕНИКС"» | ИНН 5262290828 | ОГРН 1135262006296 | Нижний Новгород</p>
+        <p>Поставка промышленного оборудования, нефтепродуктов, технических жидкостей, химической продукции</p>
+    </footer>
 </div>
 
 <script>
+    // форма (можно убрать, если не нужна отправка, но оставлена для демо)
     const form = document.getElementById('phoenixForm');
     const statusDiv = document.getElementById('phStatus');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('phName').value.trim();
-        const contact = document.getElementById('phContact').value.trim();
-        if(!name || !contact) {
-            statusDiv.innerHTML = '❌ Заполните имя и контакт';
+    if(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('phName').value.trim();
+            const contact = document.getElementById('phContact').value.trim();
+            if(!name || !contact) {
+                statusDiv.innerHTML = '❌ Заполните имя и контакт';
+                statusDiv.style.color = '#e65e1e';
+                return;
+            }
+            statusDiv.innerHTML = '✅ Спасибо! Менеджер свяжется в течение часа.';
             statusDiv.style.color = '#e65e1e';
-            return;
-        }
-        statusDiv.innerHTML = '✅ Спасибо! Мы отправим прайс-лист в течение часа.';
-        statusDiv.style.color = '#e65e1e';
-        form.reset();
-        setTimeout(() => statusDiv.innerHTML = '', 4000);
-    });
+            form.reset();
+            setTimeout(() => statusDiv.innerHTML = '', 4000);
+        });
+    }
 </script>
 </body>
 </html>
